@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,30 +13,38 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="114dp"
+            android:rotationY="2"
+            android:scaleX="2"
+            android:src="@drawable/hello" />
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="59dp"
-            android:layout_marginTop="32dp">
+            android:layout_height="wrap_content"
+            android:text="SignUp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="50sp"
+            android:layout_marginTop="24dp"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="parent"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="parent"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:inputType="textPersonName"
+            />
 
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 </ScrollView>
